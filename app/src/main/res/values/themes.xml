@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.JustScanner" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.PdfView.SelectedTheme" parent="@style/Theme.PdfView.Light">
+        <item name="pdfView_backIcon">@drawable/ic_back_icon</item>
+        <item name="pdfView_showToolbar">true</item>
+        <item name="pdfView_disableScreenshots">true</item>
+
+    </style>
+
+</resources>

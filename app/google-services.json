@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "862121876435",
+    "project_id": "just-scanner",
+    "storage_bucket": "just-scanner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862121876435:android:0652dd36827d4e76822d26",
+        "android_client_info": {
+          "package_name": "com.just.scanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg1TohoetO7s4-NI7y2m0IFznGLFT9aAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862121876435:android:e42956c808840d50822d26",
+        "android_client_info": {
+          "package_name": "com.just.scanner.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg1TohoetO7s4-NI7y2m0IFznGLFT9aAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/llTopBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackButton"
+            android:layout_width="@dimen/top_bar_icon"
+            android:layout_height="@dimen/top_bar_icon"
+            android:src="@drawable/ic_main"
+            app:tint="@color/black" />
+
+
+        <TextView
+            android:id="@+id/tvSkuName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_12"
+            android:lineSpacingExtra="0sp"
+            android:lineHeight="@dimen/sp_19"
+            android:fontFamily="@font/basisgrotesquearabicpro_black"
+            android:text="Just Scanner"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_20"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llShootUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingTop="@dimen/dp_12"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/llTopBar">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvShoot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            android:elevation="0dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/bg_card_corner"
+                android:layout_gravity="center_horizontal">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieShoot"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@color/transparent_2"
+                    app:layout_constraintCircleRadius="@dimen/dp_150"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/scan_document"/>
+
+                <TextView
+                    android:id="@+id/tvShoot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:fontFamily="@font/basisgrotesquearabicpro_black"
+                    android:lineHeight="@dimen/sp_24"
+                    android:text="Click Image"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/tvSubHeading"/>
+
+                <TextView
+                    android:id="@+id/tvShootDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/basisgrotesquearabicpro_regular"
+                    android:lineHeight="@dimen/sp_19"
+                    android:lineSpacingExtra="0sp"
+                    android:text="Get gyroscope experience for accuracy"
+                    android:textColor="#9902060C"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRateApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        android:elevation="0dp"
+        android:layout_marginStart="@dimen/dp_15"
+        android:backgroundTint="@color/primary_light"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintTop_toBottomOf="@+id/llShootUpload">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieRateApp"
+                android:layout_width="101dp"
+                android:layout_height="101dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_15"
+                android:background="@color/transparent_2"
+                app:layout_constraintCircleRadius="@dimen/dp_150"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/rate_app"/>
+
+
+            <TextView
+                android:id="@+id/tvRateApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/basisgrotesquearabicpro_medium"
+                android:lineHeight="@dimen/sp_24"
+                android:text="We Value Your App Experience"
+                android:textColor="@color/midnight30"
+                android:textSize="@dimen/dp_16"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/tvRateAppDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tvRateApp"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/basisgrotesquearabicpro_bold"
+                android:lineHeight="@dimen/sp_19"
+                android:lineSpacingExtra="0sp"
+                android:text="Share Your Thoughts"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llRateApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/dp_15"
+                android:orientation="vertical"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_below="@+id/tvRateAppDescription">
+
+                <TextView
+                    android:id="@+id/tvRateAppClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="@dimen/sp_16"
+                    android:fontFamily="@font/basisgrotesquearabicpro_bold"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_13"
+                    android:lineSpacingExtra="1sp"
+                    android:text="Rate App"/>
+
+                <View
+                    android:id="@+id/rateAppDottedLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="-4dp"
+                    android:background="@drawable/dotted_line" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvShareApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        android:elevation="0dp"
+        android:layout_marginStart="@dimen/dp_15"
+        android:backgroundTint="@color/share_app_card_bg"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_50"
+        app:layout_constraintTop_toBottomOf="@+id/cvRateApp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieShareApp"
+                android:layout_width="101dp"
+                android:layout_height="101dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_15"
+                android:background="@color/transparent_2"
+                app:layout_constraintCircleRadius="@dimen/dp_150"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/share_app"/>
+
+
+            <TextView
+                android:id="@+id/tvShareApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/basisgrotesquearabicpro_medium"
+                android:lineHeight="@dimen/sp_24"
+                android:text="Love using the Photo Lens App?"
+                android:textColor="@color/midnight30"
+                android:textSize="@dimen/dp_16"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/tvShareAppDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tvShareApp"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/basisgrotesquearabicpro_bold"
+                android:lineHeight="@dimen/sp_19"
+                android:lineSpacingExtra="0sp"
+                android:text="Share the Joy, Multiply the Fun!"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llShareApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/dp_15"
+                android:orientation="vertical"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_below="@+id/tvShareAppDescription">
+
+                <TextView
+                    android:id="@+id/tvShareAppClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="@dimen/sp_16"
+                    android:fontFamily="@font/basisgrotesquearabicpro_bold"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_13"
+                    android:lineSpacingExtra="1sp"
+                    android:text="Share App"/>
+
+                <View
+                    android:id="@+id/shareAppDottedLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="-4dp"
+                    android:background="@drawable/dotted_line" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

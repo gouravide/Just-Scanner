@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".output.OutputFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlTopBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_20"
+            android:foregroundGravity="center_vertical"
+            android:src="@drawable/ic_back_icon"
+            app:tint="@color/black" />
+
+
+        <TextView
+            android:id="@+id/tvSkuName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_12"
+            android:maxLength="20"
+            android:fontFamily="@font/basisgrotesquearabicpro_medium"
+            android:lineHeight="@dimen/sp_19"
+            android:lineSpacingExtra="0sp"
+            android:textColor="@color/black_bg92"
+            android:textSize="@dimen/dp_16"
+            tools:text="Just Scanner" />
+
+    </RelativeLayout>
+
+    <com.rajat.pdfviewer.PdfRendererView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:pdfView_divider="@drawable/pdf_viewer_divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlTopBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:pdfView_showDivider="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_30">
+        <Button
+            android:id="@+id/btDownload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:elevation="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:fontFamily="@font/basisgrotesquearabicpro_black"
+            android:text="Download Pdf"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            app:backgroundTint="@color/greenhaze"/>
+        <Button
+            android:id="@+id/btShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:elevation="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:fontFamily="@font/basisgrotesquearabicpro_black"
+            android:text="Share and Download Pdf"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:backgroundTint="@color/pink"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
